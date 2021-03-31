@@ -22,16 +22,26 @@ a{
 }
 .menu li a:hover{
 	color: #fff;
+	text-decoration: none;
 }
 h1{
 	font-size: 30px;
 	padding: 20px 0px 10px 0px;
 	text-align: center;
 }
+.left{
+	width: 98%;
+}
 h2{
 	font-size: 24px;
 	padding: 20px;
 	text-align: center;
+}
+.news{
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #ededed;
+	border-radius: 10px;
 }
 h3{
 	font-size: 18px;
@@ -40,18 +50,10 @@ h3{
 	justify-content: space-between;
 	padding-bottom: 10px;
 }
-.date{
+.time{
 	font-weight: normal;
-	text-align: right;
-}
-.left{
-	width: 98%;
-}
-.news{
-	display: flex;
-	flex-direction: column;
-	border: 1px solid #ededed;
-	border-radius: 10px;
+	font-size: 14px;
+	color: #8a9aa6;
 }
 .news li{
 	padding: 20px;
@@ -65,10 +67,6 @@ h3{
 	float: left;
 	padding-right: 20px;
 }
-.date{
-	font-size: 16px;
-	color: #8a9aa6;
-}
 .left button{
 	width: 100%;
 	margin: 30px 0px;
@@ -77,4 +75,23 @@ h3{
 	border-radius: 10px;
 	color: #fff;
 	border: none;
+}
+.right{
+	width: 98%;
+}
+.rewards{
+	display: grid;
+	grid-template-columns: 1fr 100px 1fr;
+	grid-template-rows: auto;
+	align-items: center;
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+}
+.attendet:nth-child(odd),
+.date:nth-child(even){
+	text-align: right;
+}
+.badge::before{
+	content: '+1';
+	font-size: 24px;
 }
